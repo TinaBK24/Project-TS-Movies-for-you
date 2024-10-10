@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project-TS Movies for you</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Movies for You</h1>
+    <h2>The best MovieDB</h2>
+
+    <form>
+      <input type="text" name="" id="movies_input" placeholder="Search by title, year, director...">
+      <input type="button" value="SEARCH" id="search_btn">
+    </form>
+
+    <div class="filters">
+      <button id="year_up">YEAR UP</button>
+      <button id="year_down">YEAR DOWN</button>
+      <button id="best_rate">BEST RATE</button>
+      <select id="genre_filter">
+        <option value="">Filter by Genre</option>
+        <option value="Crime">Crime</option>
+        <option value="Drama">Drama</option>
+        <option value="Action">Action</option>
+        <option value="Thriller">Thriller</option>
+      </select>
+    </div>
+
+    <h3>Add a New Movie</h3>
+    <form id="add_movie_form">
+      <input type="text" id="new_movie_title" placeholder="Title" required>
+      <input type="text" id="new_movie_year" placeholder="Year" required>
+      <input type="text" id="new_movie_director" placeholder="Director" required>
+      <input type="text" id="new_movie_duration" placeholder="Duration" required>
+      <input type="text" id="new_movie_genre" placeholder="Genres (comma separated)" required>
+      <input type="text" id="new_movie_rating" placeholder="Rating (e.g., 8.9)" required>
+      <input type="button" value="ADD MOVIE" id="add_movie_btn">
+    </form>
+
+    <div id="movies_container"></div>
+    <p id="no_results" style="display: none;">No movies found.</p>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
